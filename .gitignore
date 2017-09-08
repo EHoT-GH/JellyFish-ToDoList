@@ -1,0 +1,10 @@
+# Dependency directories
+node_modules/
+
+
+# JavaScript files
+todo/**/*.js
+todo/**/*.js.map
+
+#IDE
+/.idea
