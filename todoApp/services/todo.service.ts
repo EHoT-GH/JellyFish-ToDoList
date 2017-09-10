@@ -11,7 +11,6 @@ export class TodoService {
         } else {
             data = todoData;
         }
-        console.log(data);
         return data;
     }
 
