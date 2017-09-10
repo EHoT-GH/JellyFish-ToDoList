@@ -1,5 +1,5 @@
 # JellyFish-ToDoList
-
+<img src="img/todo.png" />
 Установка:
 1. Склонировать репозиторий на свой компьютер <code>\>git clone https://github.com/EHoT-GH/JellyFish-ToDoList.git</code>
 2. Установить зависимости <code>\>npm install</code>
