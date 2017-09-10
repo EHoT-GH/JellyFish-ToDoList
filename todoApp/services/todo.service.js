@@ -13,7 +13,6 @@ var TodoService = /** @class */ (function () {
         else {
             data = index_1.todoData;
         }
-        console.log(data);
         return data;
     };
     TodoService.prototype.getTodoList = function () {
