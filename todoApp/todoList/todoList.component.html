@@ -1,0 +1,9 @@
+<div class="todo-list">
+  <todo-form>Form is loading...</todo-form>
+  <div *ngIf="todoList.length">
+    <todo-item *ngFor="let todo of todoList"
+               [todoItem]="todo"
+               (remove)="removeItem($event)"
+               (toggle)="toggleCompleted($event)">Items is loading...</todo-item>
+  </div>
+</div>

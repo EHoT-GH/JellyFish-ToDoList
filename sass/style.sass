@@ -1,3 +1,136 @@
+@import 'vars'
+
 *
     padding: 0
     margin: 0
+    box-sizing: border-box
+    font-family: $font
+
+body
+    height: 100vh
+    background-color: $bgc
+
+ul
+    list-style: none
+
+button
+    border: none
+    background-color: $active
+    color: $button-color
+    padding: 0 10px
+    height: 24px
+    cursor: pointer
+    line-height: 24px
+    vertical-align: middle
+    transition: all 0.3s ease
+    &.delete
+        background-color: $invalid
+        float: right
+        border-radius: 3px
+        &:hover
+            background-color: $danger
+            color: $F
+    &:hover
+        background-color: $hover
+        color: $F
+    &:active
+        background-color: $active
+    &[disabled]
+        background-color: $disabled
+        color: $F
+        text-shadow: 1px 1px 3px $O
+
+todo-list div
+    width: 100%
+
+.todo-list
+    width: 50%
+    margin: auto
+    padding: 10px 0
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    flex-direction: column
+
+todo-form
+    width: 100%
+    display: flex
+    border-bottom: $border
+    border-radius: 3px
+    box-shadow: 0 0 10px $O
+    background-color: $F
+    form.todo-form
+        width: 100%
+        margin: 10px
+        position: relative
+        input
+            width: 100%
+            padding: 5px
+            margin: 10px 0
+            border: $border
+            border-radius: 4px
+            flex: 1
+            outline: none
+            &:focus
+                border: 1px solid $focus
+                &.ng-invalid.ng-dirty
+                    border: 1px solid $invalid
+        button
+            position: absolute
+            right: 1px
+            top: 11px
+            height: 28px
+            border-radius: 0 3px 3px 0
+            transition: all 0.3s ease
+
+todo-item
+    width: 100%
+    display: block
+    margin-top: 20px
+    overflow: hidden
+    .todo-item
+        min-width: 100%
+        padding: 10px 10px
+        display: block
+        align-items: flex-start
+        position: relative
+        border-bottom: $border
+        .check
+            position: relative
+            &:before
+                content: ''
+                position: absolute
+                top: 0
+                left: 0
+                width: 16px
+                height: 16px
+                border: $border
+                border-radius: 5px
+                background-color: $bgc
+                transition: all 0.5s ease
+            &:hover:before
+                border: $border-hover
+            &.checked
+                transition: all 0.5s ease
+                &:after
+                    position: absolute
+                    top: -10px
+                    left: 0
+                    font-size: 26px
+                    color: $active
+                    content: '\2714'
+                &:hover:after
+                    color: $hover
+
+        .title
+            padding-left: 32px
+            color: $hover
+            letter-spacing: 3px
+            transition: all 0.5s ease
+            &.completed
+                text-decoration: line-through
+                color: $active
+                letter-spacing: 0
+            &:hover
+                cursor: pointer
+                color: $O
